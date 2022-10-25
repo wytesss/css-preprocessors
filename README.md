@@ -27,7 +27,7 @@ Please note that you MUST add all CSS rules to the `src/style.scss` file without
    - Add an empty `sass` script to `package.json` scripts.
    - Compose a `sass` script to take all `.scss` files from the `src` folder, compile them to `.css`, and put new file(s) into the `src/css` folder. Follow step 3 from the article [How to set up Sass in your project](https://dev.to/chrissiemhrk/how-to-setup-sass-in-your-project-2bo1). Please do not remove or change the existing scripts.
    - run `sass` script.
-
+   - don't forget to upload ALL changes to repository (including `package.json`, `package.lock.json` and generated CSS files).
   ### Style the page
 
    #### Create variables
@@ -37,8 +37,7 @@ Please note that you MUST add all CSS rules to the `src/style.scss` file without
    - Refactor `style.scss` to use Sass variables from the `_variables.scss` file. Don't forget to import `_variables.scss`.
    - After the `style.scss` file is changed, a new `style.css` file should appear in the `src/css` folder. Observe how your styles are compiled in CSS.
    #### Apply nesting selectors
-   - Refactor `style.scss` using nesting selectors. For example, `block__title--green` should be changed to 
-   `.block{&__title{&--green{/* your CSS rules here */}}}`, and `.block--small` will be `.block {&--small{/* your CSS rules here */}}`. Don't change the CSS rules for selectors.
+   - Refactor `style.scss` using nesting selectors. For example `.block--small` will be `.block {&--small{/* your CSS rules here */}}`. Don't change the CSS rules for selectors.
    - Observe how your changes are compiled in `src/css/style.css`.
    #### Use @extend
    - create `_placeholders.scss` in the `src` folder.
